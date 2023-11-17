@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churn Prediction Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Churn Prediction Form</h1>
+    <form action="/predict" method="post">
+        <label for="totalCharges">Total Charges:</label>
+        <input type="text" name="totalCharges" required>
+
+        <label for="monthlyCharges">Monthly Charges:</label>
+        <input type="text" name="monthlyCharges" required>
+
+        <label for="tenure">Tenure:</label>
+        <input type="text" name="tenure" required>
+
+        <label for="contract">Contract:</label>
+        <select name="contract" required>
+            <option value="Month-to-month">Month-to-month</option>
+            <option value="One year">One year</option>
+            <option value="Two year">Two year</option>
+        </select>
+
+        <label for="paymentMethod">Payment Method:</label>
+        <select name="paymentMethod" required>
+            <option value="Electronic check">Electronic check</option>
+            <option value="Mailed check">Mailed check</option>
+            <option value="Bank transfer (automatic)">Bank transfer (automatic)</option>
+            <option value="Credit card (automatic)">Credit card (automatic)</option>
+        </select>
+
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
