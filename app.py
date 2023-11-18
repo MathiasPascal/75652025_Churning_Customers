@@ -5,7 +5,7 @@ from keras.models import load_model
 app = Flask(__name__)
 
 # Load the trained Keras model
-model = load_model('best_model.h5')  # Make sure to replace with the correct file path
+model = load_model('model.h5')  # Make sure to replace with the correct file path
 
 # HTML form route
 @app.route('/')
